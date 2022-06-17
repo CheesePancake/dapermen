@@ -11,7 +11,7 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 15/06/2022 10:46:48
+ Date: 17/06/2022 08:42:57
 */
 
 SET NAMES utf8mb4;
@@ -102,7 +102,7 @@ CREATE TABLE `auth_logins`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of auth_logins
@@ -116,6 +116,8 @@ INSERT INTO `auth_logins` VALUES (6, '::1', 'admin@perpus.id', 1, '2022-06-12 00
 INSERT INTO `auth_logins` VALUES (7, '::1', 'admin@perpus.id', 1, '2022-06-12 21:28:40', 1);
 INSERT INTO `auth_logins` VALUES (8, '::1', 'admin@perpus.id', 1, '2022-06-13 08:56:09', 1);
 INSERT INTO `auth_logins` VALUES (9, '::1', 'admin@perpus.id', 1, '2022-06-14 02:24:08', 1);
+INSERT INTO `auth_logins` VALUES (10, '::1', 'admin@perpus.id', 1, '2022-06-16 16:17:14', 1);
+INSERT INTO `auth_logins` VALUES (11, '::1', 'admin@perpus.id', 1, '2022-06-16 17:56:50', 1);
 
 -- ----------------------------
 -- Table structure for auth_permissions
@@ -171,7 +173,6 @@ CREATE TABLE `auth_tokens`  (
 -- ----------------------------
 -- Records of auth_tokens
 -- ----------------------------
-INSERT INTO `auth_tokens` VALUES (1, 'faccbbc673b7bc661c27f65f', '3c76e8bc4662a94dc609bc29fd35a9d4ca9a9fff5254dc887006920262949c31', 1, '2022-07-13 08:56:09');
 
 -- ----------------------------
 -- Table structure for auth_users_permissions
@@ -223,12 +224,13 @@ CREATE TABLE `kembali`  (
   `judul_buku` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nama_peminjam` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id_kembali`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kembali
 -- ----------------------------
 INSERT INTO `kembali` VALUES (1, '2022-06-13', '2022-06-28', 'Belum dikembalikan', '', 'Alip Aldiansyah');
+INSERT INTO `kembali` VALUES (2, '2022-06-16', '2022-06-17', 'Belum dikembalikan', 'test', 'test');
 
 -- ----------------------------
 -- Table structure for migrations
